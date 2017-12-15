@@ -1,0 +1,30 @@
+.xaxis line,
+.yaxis line {
+	fill: white;
+	stroke: white;
+	shape-rendering: auto;
+}
+.xaxis text,
+.yaxis text {
+	font-family: arial;
+	font-size: 13px;
+}
+input {
+	width: 100%;
+	font-size: 14px;
+}
+.center-text {
+	text-align: center;
+}
+li {
+	cursor: pointer;
+}
+li:hover {
+	background-color: rebeccapurple;
+}
+
+
+div {
+     background-color: white;
+ }
+
