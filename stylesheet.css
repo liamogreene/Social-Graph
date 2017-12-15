@@ -28,3 +28,11 @@ div {
      background-color: white;
  }
 
+div {
+    margin-bottom: 16px;
+}
+
+.zoom {
+    zoom: 2;
+}
+

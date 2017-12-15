@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
 	$("#getContributors").bind("click", function() {
-		var user = $("username").val();
+		var user = $("#user").val();
 		var repo = $("#repo").val();
 		var filename = $("#filename").val();
-		var url = "https://api.github.com/repos/" + user + "/" + repo + "/commits?path=" + filename
+		var url = "https://api.github.com/repos/" + repo + "/" + user + "/commits?path=" + filename
 		$.getJSON(url, function(data) {
 			var list = $("<ul />");
 			$.each(data, function(index, item) {
@@ -18,11 +18,10 @@ $(document).ready(function(){
 				$(this).empty().append(list).fadeIn(1000);
 			});
 		})
-		.done(function() { alert("another chained success"); })
-		.fail(function() { alert("chained error"); })
-		.always(function() { alert(url +"chained complete"); });
+		.done(function() { alert("success"); })
+		.fail(function() { alert("error"); })
+		.always(function() { alert(url +"  <- check your url if error"); });
 		;
-		console.log(url);
 	});
 
 	$("#search").click(function(){
@@ -65,11 +64,11 @@ $(document).ready(function(){
   			if (data.hasOwnProperty(key)) { // print out repos
   				var item = new Object();
   				item.info = data[key];
-					item.key = key; // stuctured data type 
+				item.key = key; // stuctured data type 
 
-					APIdata.push(item); // store structured data type
-				};
+				APIdata.push(item); // store structured data type
 			};
+		};
 
   		//begin d3 graph
   		xScale.domain(APIdata.map(function (data) {
