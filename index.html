@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="stylesheet.css" rel="stylesheet"/>
+	<link href="foundation.min.css" rel="stylesheet"/>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="d3.min.js" type="text/javascript"></script>
+	<script src="VisualiseGithubAPI.js" type="text/javascript"></script>
+	<title>Software Engineering Project - Github API</title>
+</head>
+
+<body>
+
+	<div class="row">
+		<h2>Github API Visualisation</h2>
+	</div>
+
+	<div class="row">
+		<section id="fetch">
+			<input placeholder="Enter a Github Username to find out more about the user's work" id="term"/>
+			<button id="search">Find</button>
+		</section>
+
+	</div>
+	<div class="row">
+		<div class="large-5 medium-5 small-12 columns">
+			<ol id="repoInfo"></ol>
+		</div>
+
+		<div class="large-7 medium-7 small-12 columns" id="chart"> </div>	
+	</div>
+
+	<div id="input">
+    <span>Enter File Name</span>
+    <input id="filename" type="text"/>
+</div>
+
+<div id="input2">
+    <span>Enter User Name</span>
+    <input id="username" type="text"/>
+</div>
+
+<div id="input3">
+    <span>Enter Repo Name</span>
+    <input id="repo" type="text"/>
+    <button id="getContributors">Get Contributors</button>
+</div>
+<div id="output"></div>
+
+
+
+</body>
+</html>
