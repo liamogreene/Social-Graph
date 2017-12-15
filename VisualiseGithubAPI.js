@@ -84,8 +84,8 @@ $(document).ready(function(){
 	    .attr("height", height + top + bottom);
 
 		var yScale = d3.scale.ordinal()
-	    .domain([0, d3.max(APIdata2, function(d) {
-	    	return d.info; 
+	    .domain([0, d3.max(APIdata2, function(data2) {
+	    	return data2.info; 
 	    })
 	    ])
 	    .range([height,top]);
@@ -93,8 +93,8 @@ $(document).ready(function(){
 
 	  // define the x scale
 		var xScale = d3.scale.ordinal()
-	    .domain(APIdata2.map(function (d) {
-	    	return d.key; 
+	    .domain(APIdata2.map(function (data2) {
+	    	return data2.key; 
 	    }))
 	    .rangeRoundBands([left, width]);
 		var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
@@ -114,7 +114,7 @@ $(document).ready(function(){
 		// lable y axis
 		svg.append("text")
 			.attr("transform", "translate(15," + (height / 2) + ")rotate(-90)")
-			.text("# characters written");
+			.text("# Contributions");
 
         // label x axis
 		svg.append("text")
